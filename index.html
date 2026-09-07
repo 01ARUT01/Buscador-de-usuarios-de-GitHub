@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buscador de usuarios de GitHub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="contenedor">
+    <h1 class="titulo">Buscador de usuarios de GitHub</h1>
+
+    <form id="buscador" class="buscador">
+      <input
+        type="text"
+        id="input-usuario"
+        class="buscador__input"
+        placeholder="Escribe un usuario de GitHub (ej. octocat)"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <button type="submit" id="boton-buscar" class="buscador__boton">
+        Buscar
+      </button>
+    </form>
+
+    <div id="mensaje-error" class="error" role="alert" hidden></div>
+
+    <section id="resultado" class="resultado" hidden>
+      <img id="avatar" class="resultado__avatar" alt="Avatar del usuario" />
+      <div class="resultado__info">
+        <h2 id="nombre" class="resultado__nombre"></h2>
+        <p id="detalle" class="resultado__detalle"></p>
+        <p class="resultado__repos" id="repos"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
